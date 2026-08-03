@@ -21,7 +21,9 @@ This repository contains independent, reusable slider projects designed for luxu
 
 ```text
 micamall/
-│  ├── index.html
+├── index.html
+├── js
+├── css
 │  ├── nimanykish/
 │  ├── kbeauty/
 │  └── goldenconsept/
