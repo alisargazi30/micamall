@@ -43,7 +43,6 @@ coverage/
 .cache/
 .parcel-cache/
 
-# help 
-README.md
+# Personal local guides (do not push)
 SETUP_GUIDE.md
 CHANGES_SUMMARY.md
