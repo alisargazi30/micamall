@@ -1,0 +1,413 @@
+* {
+  /* margin: 0;
+        padding: 0; */
+  box-sizing: border-box;
+}
+body {
+  font-family: "Vazirmatn", sans-serif;
+  background: #111;
+}
+
+.gc-hero {
+  font-family: "Vazirmatn", "Noto Sans Arabic", "Tahoma", sans-serif;
+  position: relative;
+  width: 100%;
+  height: 540px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #0c0c0c;
+  color: #fff;
+}
+.gc-hero .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  z-index: 1;
+}
+.gc-hero .slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+.gc-hero .slide-bg-gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 70% 50%,
+      rgba(201, 169, 110, 0.08) 0%,
+      transparent 60%
+    ),
+    linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #0c0c0c 100%);
+}
+.gc-hero .slide-product {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%) scale(1.08);
+  width: 45%;
+  height: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 8s linear;
+  opacity: 0.9;
+}
+.gc-hero[dir="ltr"] .slide-product {
+  right: auto;
+  left: 5%;
+}
+.gc-hero .slide.active .slide-product {
+  transform: translateY(-50%) scale(1);
+}
+.gc-hero .slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(12, 12, 12, 0.95) 0%,
+    rgba(12, 12, 12, 0.6) 50%,
+    rgba(12, 12, 12, 0.2) 100%
+  );
+}
+.gc-hero[dir="ltr"] .slide-overlay {
+  background: linear-gradient(
+    -90deg,
+    rgba(12, 12, 12, 0.95) 0%,
+    rgba(12, 12, 12, 0.6) 50%,
+    rgba(12, 12, 12, 0.2) 100%
+  );
+}
+.gc-hero .slide-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 56px;
+  max-width: 520px;
+}
+.gc-hero .slide-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(201, 169, 110, 0.1);
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  border-radius: 20px;
+  font-size: 12px;
+  color: #c9a96e;
+  font-weight: 500;
+  margin-bottom: 20px;
+  width: fit-content;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: all 0.7s ease-out 0.2s;
+}
+.gc-hero .slide-badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #c9a96e;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.3);
+  }
+}
+.gc-hero .slide.active .slide-badge {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gc-hero .slide-brand {
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #c9a96e;
+  margin-bottom: 12px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: all 0.7s ease-out 0.35s;
+}
+.gc-hero .slide.active .slide-brand {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gc-hero .slide-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: all 0.8s ease-out 0.5s;
+}
+.gc-hero .slide.active .slide-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gc-hero .slide-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 32px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: all 0.7s ease-out 0.65s;
+}
+.gc-hero .slide.active .slide-desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gc-hero .slide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border: 1px solid #c9a96e;
+  background: transparent;
+  color: #c9a96e;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0;
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    all 0.6s ease-out 0.8s,
+    background 0.3s,
+    color 0.3s;
+  width: fit-content;
+  font-family: inherit;
+}
+.gc-hero .slide.active .slide-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gc-hero .slide-btn:hover {
+  background: #c9a96e;
+  color: #0c0c0c;
+}
+.gc-hero .lang-toggle {
+  position: absolute;
+  top: 20px;
+  right: 56px;
+  z-index: 10;
+  display: flex;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 4px;
+  backdrop-filter: blur(12px);
+}
+.gc-hero .lang-btn {
+  padding: 7px 16px;
+  font-size: 13px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s;
+  font-family: inherit;
+  font-weight: 500;
+}
+.gc-hero .lang-btn.active {
+  background: rgba(201, 169, 110, 0.15);
+  color: #c9a96e;
+}
+.gc-hero .dots {
+  position: absolute;
+  bottom: 28px;
+  left: 56px;
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+}
+.gc-hero .dot {
+  width: 36px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+.gc-hero .dot.active {
+  background: rgba(255, 255, 255, 0.25);
+}
+.gc-hero .dot-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: #c9a96e;
+  border-radius: 2px;
+}
+.gc-hero .dot.active .dot-fill {
+  animation: dotProgress 6s linear forwards;
+}
+@keyframes dotProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.gc-hero .nav-arrows {
+  position: absolute;
+  right: 56px;
+  bottom: 24px;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+}
+.gc-hero .nav-arrow {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+.gc-hero .nav-arrow:hover {
+  border-color: #c9a96e;
+  background: rgba(201, 169, 110, 0.1);
+  color: #c9a96e;
+}
+.gc-hero .brand-mark {
+  position: absolute;
+  top: 20px;
+  left: 56px;
+  z-index: 10;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: #fff;
+}
+.gc-hero .brand-mark span {
+  color: #c9a96e;
+  font-weight: 400;
+}
+.gc-hero .gold-dust {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+.gc-hero .particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #c9a96e;
+  border-radius: 50%;
+  opacity: 0;
+  animation: floatGold linear infinite;
+}
+@keyframes floatGold {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(30px);
+    opacity: 0;
+  }
+}
+.gc-hero[dir="ltr"] .slide-content {
+  padding: 0 56px;
+  align-items: flex-start;
+  text-align: left;
+}
+.gc-hero[dir="ltr"] .lang-toggle {
+  right: auto;
+  left: 56px;
+}
+.gc-hero[dir="ltr"] .dots {
+  left: auto;
+  right: 56px;
+}
+.gc-hero[dir="ltr"] .nav-arrows {
+  right: auto;
+  left: 56px;
+}
+.gc-hero[dir="ltr"] .brand-mark {
+  left: auto;
+  right: 56px;
+}
+@media (max-width: 768px) {
+  .gc-hero {
+    height: 480px;
+  }
+  .gc-hero .slide-content {
+    padding: 0 24px;
+    max-width: 100%;
+  }
+  .gc-hero .slide-title {
+    font-size: 26px;
+  }
+  .gc-hero .slide-product {
+    width: 60%;
+    opacity: 0.4;
+    right: -10%;
+  }
+  .gc-hero[dir="ltr"] .slide-product {
+    left: -10%;
+    right: auto;
+  }
+  .gc-hero .lang-toggle {
+    right: 24px;
+  }
+  .gc-hero .dots {
+    left: 24px;
+  }
+  .gc-hero .nav-arrows {
+    right: 24px;
+  }
+  .gc-hero .brand-mark {
+    left: 24px;
+  }
+  .gc-hero[dir="ltr"] .lang-toggle {
+    left: 24px;
+    right: auto;
+  }
+  .gc-hero[dir="ltr"] .dots {
+    right: 24px;
+    left: auto;
+  }
+  .gc-hero[dir="ltr"] .nav-arrows {
+    left: 24px;
+    right: auto;
+  }
+  .gc-hero[dir="ltr"] .brand-mark {
+    right: 24px;
+    left: auto;
+  }
+}

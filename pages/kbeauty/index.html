@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K-Beauty Hero Slider</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  </head>
+  <body>
+    <div class="kskin-hero" dir="rtl">
+      <div class="brand-mark">K-BEAUTY <span>SKINCARE</span></div>
+
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="fa" onclick="setLangK('fa')">
+          FA
+        </button>
+        <button class="lang-btn" data-lang="en" onclick="setLangK('en')">
+          EN
+        </button>
+      </div>
+
+      <div class="floating-bubbles" id="bubbles"></div>
+
+      <div class="slides-container">
+        <!-- Slide 0: SKIN1004 -->
+        <div class="slide active" data-index="0">
+          <div
+            class="slide-bg"
+            style="
+              background-image: url(&quot;https://kimi-web-img.moonshot.cn/img/media.lanecrawford.com.cn/fb4641fb5d3f0c03b61ba059fd3e4463af458da5.png&quot;);
+            "
+          ></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div
+              class="slide-badge"
+              data-fa="پوست حساس"
+              data-en="Sensitive Skin"
+            >
+              پوست حساس
+            </div>
+            <div class="slide-brand">SKIN1004</div>
+            <div
+              class="slide-title"
+              data-fa="قدرت سنتلا از ماداگاسکار"
+              data-en="The Power of Centella from Madagascar"
+            >
+              قدرت سنتلا از ماداگاسکار
+            </div>
+            <div
+              class="slide-desc"
+              data-fa="فرمولاسیون خالص و ملایم با عصاره سنتلا آسیاتیکا برای تسکین و ترمیم پوست‌های حساس و آسیب‌دیده."
+              data-en="Pure, gentle formulations with Centella Asiatica extract to soothe and repair sensitive, damaged skin."
+            >
+              فرمولاسیون خالص و ملایم با عصاره سنتلا آسیاتیکا برای تسکین و ترمیم
+              پوست‌های حساس و آسیب‌دیده.
+            </div>
+            <button
+              class="slide-btn"
+              data-fa="مشاهده محصولات"
+              data-en="View Products"
+            >
+              مشاهده محصولات
+            </button>
+          </div>
+        </div>
+        <!-- Slide 1: COSRX -->
+        <div class="slide" data-index="1">
+          <div
+            class="slide-bg"
+            style="
+              background-image: url(&quot;https://kimi-web-img.moonshot.cn/img/www.cosrx.com/738ccd5f4f2fdd24e74cbcb97110575295753613.jpg&quot;);
+            "
+          ></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div
+              class="slide-badge"
+              data-fa="آبرسان قوی"
+              data-en="Deep Hydration"
+            >
+              آبرسان قوی
+            </div>
+            <div class="slide-brand">COSRX</div>
+            <div
+              class="slide-title"
+              data-fa="راز درخشش حلزون کره‌ای"
+              data-en="The Secret of Korean Snail Glow"
+            >
+              راز درخشش حلزون کره‌ای
+            </div>
+            <div
+              class="slide-desc"
+              data-fa="اسنس ۹۶٪ مخاط حلزون COSRX برای آبرسانی عمیق، ترمیم پوست و کاهش جای جوش — محبوب‌ترین سرم کره‌ای جهان."
+              data-en="COSRX 96% Snail Mucin Essence for deep hydration, skin repair and acne scar reduction — the world's favorite Korean serum."
+            >
+              اسنس ۹۶٪ مخاط حلزون COSRX برای آبرسانی عمیق، ترمیم پوست و کاهش جای
+              جوش — محبوب‌ترین سرم کره‌ای جهان.
+            </div>
+            <button class="slide-btn" data-fa="اکنون بخرید" data-en="Shop Now">
+              اکنون بخرید
+            </button>
+          </div>
+        </div>
+        <!-- Slide 2: AXIS-Y -->
+        <div class="slide" data-index="2">
+          <div
+            class="slide-bg"
+            style="
+              background-image: url(&quot;https://kimi-web-img.moonshot.cn/img/www.axis-y.com/de784c8838796c7e2c71d5320c32eedf186bea0e.png&quot;);
+            "
+          ></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div
+              class="slide-badge"
+              data-fa="محیط‌محور"
+              data-en="Climate Inspired"
+            >
+              محیط‌محور
+            </div>
+            <div class="slide-brand">AXIS-Y</div>
+            <div
+              class="slide-title"
+              data-fa="مراقبت پوست متناسب با آب‌وهوا"
+              data-en="Skincare Tailored to Your Climate"
+            >
+              مراقبت پوست متناسب با آب‌وهوا
+            </div>
+            <div
+              class="slide-desc"
+              data-fa="فرمول‌های AXIS-Y بر اساس شرایط آب‌وهوایی و سبک زندگی شما طراحی شده‌اند — برای پوستی سالم در هر فصل."
+              data-en="AXIS-Y formulas are designed based on your climate conditions and lifestyle — for healthy skin in every season."
+            >
+              فرمول‌های AXIS-Y بر اساس شرایط آب‌وهوایی و سبک زندگی شما طراحی
+              شده‌اند — برای پوستی سالم در هر فصل.
+            </div>
+            <button class="slide-btn" data-fa="کشف کنید" data-en="Discover">
+              کشف کنید
+            </button>
+          </div>
+        </div>
+        <!-- Slide 3: TOCOBO (تصویر اصلاح‌شده) -->
+        <div class="slide" data-index="3">
+          <div
+            class="slide-bg"
+            style="
+              background-image: url(&quot;https://kimi-web-img.moonshot.cn/img/tocobo.us/53d8563e4c4b4fb58e0693a853db23ecc0b1fa8a.jpg&quot;);
+            "
+          ></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div
+              class="slide-badge"
+              data-fa="آنتی‌اکسیدان"
+              data-en="Antioxidant Rich"
+            >
+              آنتی‌اکسیدان
+            </div>
+            <div class="slide-brand">TOCOBO</div>
+            <div
+              class="slide-title"
+              data-fa="زیبایی از دل ویتامین‌ها"
+              data-en="Beauty Born from Vitamins"
+            >
+              زیبایی از دل ویتامین‌ها
+            </div>
+            <div
+              class="slide-desc"
+              data-fa="محصولات TOCOBO با ویتامین B و C برای روشن‌سازی، جوان‌سازی و محافظت پوست در برابر آلودگی."
+              data-en="TOCOBO products with vitamins B & C for brightening, rejuvenation and skin protection against pollution."
+            >
+              محصولات TOCOBO با ویتامین B و C برای روشن‌سازی، جوان‌سازی و محافظت
+              پوست در برابر آلودگی.
+            </div>
+            <button
+              class="slide-btn"
+              data-fa="مشاهده مجموعه"
+              data-en="View Collection"
+            >
+              مشاهده مجموعه
+            </button>
+          </div>
+        </div>
+        <!-- Slide 4: Shiseido -->
+        <div class="slide" data-index="4">
+          <div
+            class="slide-bg"
+            style="
+              background-image: url(&quot;https://kimi-web-img.moonshot.cn/img/www.shiseido.com/0a01e9ec95ce0529db12d5d8203e3bea6459eadb.jpg&quot;);
+            "
+          ></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div
+              class="slide-badge"
+              data-fa="لوکس ژاپنی"
+              data-en="Japanese Luxury"
+            >
+              لوکس ژاپنی
+            </div>
+            <div class="slide-brand">SHISEIDO</div>
+            <div
+              class="slide-title"
+              data-fa="علم و هنر مراقبت از پوست"
+              data-en="The Art & Science of Skincare"
+            >
+              علم و هنر مراقبت از پوست
+            </div>
+            <div
+              class="slide-desc"
+              data-fa="۱۵۰ سال نوآوری Shiseido با تکنولوژی Ultimune برای تقویت ایمنی پوست و مبارزه با پیری زودرس."
+              data-en="150 years of Shiseido innovation with Ultimune technology to boost skin immunity and fight premature aging."
+            >
+              ۱۵۰ سال نوآوری Shiseido با تکنولوژی Ultimune برای تقویت ایمنی پوست
+              و مبارزه با پیری زودرس.
+            </div>
+            <button class="slide-btn" data-fa="سفارش دهید" data-en="Order Now">
+              سفارش دهید
+            </button>
+          </div>
+        </div>
+        <!-- Slide 5: Biodance -->
+        <div class="slide" data-index="5">
+          <div
+            class="slide-bg"
+            style="
+              background-image: url(&quot;https://kimi-web-img.moonshot.cn/img/biodance.com/de7d789c1659f1d7ed16d6ee2fbccc78ce6590cf.jpg&quot;);
+            "
+          ></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div
+              class="slide-badge"
+              data-fa="وایرال تیک‌تاک"
+              data-en="TikTok Viral"
+            >
+              وایرال تیک‌تاک
+            </div>
+            <div class="slide-brand">BIODANCE</div>
+            <div
+              class="slide-title"
+              data-fa="ماسکی که در پوست شما محو می‌شود"
+              data-en="A Mask That Melts Into Your Skin"
+            >
+              ماسکی که در پوست شما محو می‌شود
+            </div>
+            <div
+              class="slide-desc"
+              data-fa="ماسک بیو کلاژن Biodance با ۷۰ میلیون طرفدار — مراقبت شبانه برای پوستی صاف، درخشان و جوان."
+              data-en="Biodance Bio-Collagen Mask with 70 million fans — overnight care for smooth, glowing, youthful skin."
+            >
+              ماسک بیو کلاژن Biodance با ۷۰ میلیون طرفدار — مراقبت شبانه برای
+              پوستی صاف، درخشان و جوان.
+            </div>
+            <button
+              class="slide-btn"
+              data-fa="همین حالا امتحان کنید"
+              data-en="Try It Now"
+            >
+              همین حالا امتحان کنید
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="dots" id="dotsK"></div>
+
+      <div class="nav-arrows">
+        <button class="nav-arrow" onclick="nextSlideK()">&#10094;</button>
+        <button class="nav-arrow" onclick="prevSlideK()">&#10095;</button>
+      </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
