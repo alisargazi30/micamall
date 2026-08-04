@@ -1,0 +1,53 @@
+{
+  "name": "mica-mall-sliders",
+  "version": "1.0.0",
+  "description": "Advanced bilingual slider collection for Mica Mall retail - HTML/CSS/JS with dynamic management system",
+  "main": "js/app.js",
+  "keywords": [
+    "slider",
+    "carousel",
+    "bilingual",
+    "fa",
+    "en",
+    "html",
+    "css",
+    "javascript",
+    "responsive",
+    "retail",
+    "mica-mall"
+  ],
+  "author": "Alireza Sargazi <mr.alireza.sargazi1@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alisargazi30/mica-mall-sliders.git"
+  },
+  "homepage": "https://github.com/alisargazi30/mica-mall-sliders#readme",
+  "bugs": {
+    "url": "https://github.com/alisargazi30/mica-mall-sliders/issues"
+  },
+  "scripts": {
+    "start": "open index.html",
+    "dev": "echo 'Open index.html in your browser for development'",
+    "test": "echo 'No tests configured yet'"
+  },
+  "directories": {
+    "pages": "pages",
+    "css": "css",
+    "js": "js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.html",
+    "css/",
+    "js/",
+    "pages/",
+    "README.md",
+    "SETUP_GUIDE.md",
+    "LICENSE"
+  ],
+  "devDependencies": {},
+  "dependencies": {}
+}

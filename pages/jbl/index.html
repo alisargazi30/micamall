@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JBL Slider | اسلایدر جی‌بی‌ال</title>
+    <meta
+      name="description"
+      content="Premium JBL Product Slider - Bilingual HTML/CSS/JS by Alireza Sargazi"
+    />
+    <meta
+      name="keywords"
+      content="JBL, Slider, HTML, CSS, JS, Bilingual, Alireza Sargazi"
+    />
+    <meta name="author" content="Alireza Sargazi" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ff4c00" />
+    <meta name="googlebot" content="index, follow" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <base target="_blank" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <a href="#" class="nav-brand">
+        <div class="logo-box">JBL</div>
+        <span>JBL</span>
+      </a>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button
+            class="lang-btn active"
+            data-lang="fa"
+            onclick="setLang('fa')"
+          >
+            FA
+          </button>
+          <button class="lang-btn" data-lang="en" onclick="setLang('en')">
+            EN
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider" id="heroSlider">
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <div
+          class="slide-bg"
+          style="
+            background-image: url(&quot;https://kimi-web-img.moonshot.cn/img/photos5.appleinsider.com/416df57e8dea6411e28da6ea7d314e93d3891317.jpg&quot;);
+          "
+        ></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-tag">JBL COLLECTION</span>
+          <h2>
+            <span class="lang-fa"
+              >صدایی که <span class="orange">جهان</span> را تکان می‌دهد</span
+            >
+            <span class="lang-en"
+              >Sound That <span class="orange">Shakes</span> the World</span
+            >
+          </h2>
+          <p>
+            <span class="lang-fa"
+              >مجموعه کامل اسپیکرها، هدفون‌ها و ایربادزهای JBL با کیفیت
+              استودیویی و بیس قدرتمند. تجربه‌ای متفاوت از موسیقی.</span
+            >
+            <span class="lang-en"
+              >Complete collection of JBL speakers, headphones, and earbuds with
+              studio-quality sound and powerful bass. A different music
+              experience.</span
+            >
+          </p>
+          <div class="slide-btns">
+            <a href="#products" class="btn-jbl">
+              <i class="fas fa-shopping-bag"></i>
+              <span class="lang-fa">مشاهده محصولات</span>
+              <span class="lang-en">View Products</span>
+            </a>
+            <a
+              href="https://github.com/alisargazi30"
+              target="_blank"
+              class="btn-ghost"
+            >
+              <i class="fab fa-github"></i>
+              <span class="lang-fa">گیتهاب</span>
+              <span class="lang-en">GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+        <div
+          class="slide-bg"
+          style="
+            background-image: url(&quot;https://kimi-web-img.moonshot.cn/img/hnsgsfp.imgix.net/0542107fa967e18fda90985c3bc7c12b130d6e8e.jpg&quot;);
+          "
+        ></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-tag">PORTABLE</span>
+          <h2>
+            <span class="lang-fa"
+              ><span class="orange">JBL Go 3</span><br />همراه همیشگی</span
+            >
+            <span class="lang-en"
+              ><span class="orange">JBL Go 3</span><br />Your Everyday
+              Companion</span
+            >
+          </h2>
+          <p>
+            <span class="lang-fa"
+              >اسپیکر جیبی با طراحی ضد آب IP67 و صدای JBL Pro Sound. باتری ۵
+              ساعته برای لحظات بی‌نظیر.</span
+            >
+            <span class="lang-en"
+              >Pocket speaker with IP67 waterproof design and JBL Pro Sound.
+              5-hour battery for unforgettable moments.</span
+            >
+          </p>
+          <div class="slide-btns">
+            <a href="#products" class="btn-jbl">
+              <i class="fas fa-info-circle"></i>
+              <span class="lang-fa">جزئیات بیشتر</span>
+              <span class="lang-en">Learn More</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide">
+        <div
+          class="slide-bg"
+          style="
+            background-image: url(&quot;https://kimi-web-img.moonshot.cn/img/imageio.forbes.com/937659b72c68ca12d431ec1edefe2b901db48f4f.jpg&quot;);
+          "
+        ></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-tag">PREMIUM</span>
+          <h2>
+            <span class="lang-fa"
+              >هدفون‌های <span class="orange">حرفه‌ای</span></span
+            >
+            <span class="lang-en"
+              ><span class="orange">Professional</span> Headphones</span
+            >
+          </h2>
+          <p>
+            <span class="lang-fa"
+              >سری Live و Tour با فناوری Noise Cancelling adaptive. صدایی فراتر
+              از تصور با راحتی طولانی‌مدت.</span
+            >
+            <span class="lang-en"
+              >Live and Tour series with adaptive Noise Cancelling technology.
+              Sound beyond imagination with long-lasting comfort.</span
+            >
+          </p>
+          <div class="slide-btns">
+            <a href="#products" class="btn-jbl">
+              <i class="fas fa-headphones"></i>
+              <span class="lang-fa">مشاهده هدفون‌ها</span>
+              <span class="lang-en">View Headphones</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="slider-arrows">
+        <div class="arrow" onclick="prevSlide()">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="arrow" onclick="nextSlide()">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+      </div>
+      <div class="slider-dots">
+        <div class="dot active" onclick="goToSlide(0)"></div>
+        <div class="dot" onclick="goToSlide(1)"></div>
+        <div class="dot" onclick="goToSlide(2)"></div>
+      </div>
+      <div class="progress-bar" id="progressBar"></div>
+    </section>
+
+    <!-- Features Strip -->
+    <section class="features">
+      <div class="features-grid">
+        <div class="feature-item reveal">
+          <i class="fas fa-broadcast-tower"></i>
+          <h4>
+            <span class="lang-fa">بلوتوث ۵.۳</span>
+            <span class="lang-en">Bluetooth 5.3</span>
+          </h4>
+          <p>
+            <span class="lang-fa">اتصال پایدار و سریع</span>
+            <span class="lang-en">Stable & fast connection</span>
+          </p>
+        </div>
+        <div class="feature-item reveal">
+          <i class="fas fa-tint-slash"></i>
+          <h4>
+            <span class="lang-fa">ضد آب IP67</span>
+            <span class="lang-en">Waterproof IP67</span>
+          </h4>
+          <p>
+            <span class="lang-fa">مناسب هر شرایطی</span>
+            <span class="lang-en">Ready for any condition</span>
+          </p>
+        </div>
+        <div class="feature-item reveal">
+          <i class="fas fa-battery-full"></i>
+          <h4>
+            <span class="lang-fa">باتری قدرتمند</span>
+            <span class="lang-en">Powerful Battery</span>
+          </h4>
+          <p>
+            <span class="lang-fa">تا ۲۴ ساعت پخش</span>
+            <span class="lang-en">Up to 24h playback</span>
+          </p>
+        </div>
+        <div class="feature-item reveal">
+          <i class="fas fa-music"></i>
+          <h4>
+            <span class="lang-fa">JBL Pro Sound</span>
+            <span class="lang-en">JBL Pro Sound</span>
+          </h4>
+          <p>
+            <span class="lang-fa">کیفیت استودیویی</span>
+            <span class="lang-en">Studio-quality audio</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+      <div class="section-head reveal">
+        <h2>
+          <span class="lang-fa">محصولات <span>JBL</span></span>
+          <span class="lang-en"><span>JBL</span> Products</span>
+        </h2>
+        <p>
+          <span class="lang-fa">برترین محصولات صوتی JBL در میکامال کیش</span>
+          <span class="lang-en">Top JBL audio products at Mika Mall Kish</span>
+        </p>
+      </div>
+      <div class="product-grid">
+        <div class="product-card reveal">
+          <div class="product-img">
+            <span class="product-badge">NEW</span>
+            <img
+              src="https://kimi-web-img.moonshot.cn/img/hnsgsfp.imgix.net/0542107fa967e18fda90985c3bc7c12b130d6e8e.jpg"
+              alt="JBL Go 3"
+            />
+          </div>
+          <div class="product-info">
+            <h3>JBL Go 3</h3>
+            <p>
+              <span class="lang-fa"
+                >اسپیکر قابل حمل با طراحی جدید و صدای قدرتمند</span
+              >
+              <span class="lang-en"
+                >Portable speaker with new design and powerful sound</span
+              >
+            </p>
+            <div class="product-footer">
+              <div class="price">۲,۹۰۰ <span>تومان</span></div>
+              <button class="btn-sm">
+                <span class="lang-fa">خرید</span>
+                <span class="lang-en">Buy</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal">
+          <div class="product-img">
+            <span class="product-badge">HOT</span>
+            <img
+              src="https://kimi-web-img.moonshot.cn/img/www.jbl.com.au/ab82b336f93f2579101a293914e4a5dfa2ddc46a.png"
+              alt="JBL Tune"
+            />
+          </div>
+          <div class="product-info">
+            <h3>JBL Tune Series</h3>
+            <p>
+              <span class="lang-fa"
+                >هدفون بی‌سیم با باس عمیق و راحتی فوق‌العاده</span
+              >
+              <span class="lang-en"
+                >Wireless headphones with deep bass and great comfort</span
+              >
+            </p>
+            <div class="product-footer">
+              <div class="price">۵,۵۰۰ <span>تومان</span></div>
+              <button class="btn-sm">
+                <span class="lang-fa">خرید</span>
+                <span class="lang-en">Buy</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal">
+          <div class="product-img">
+            <img
+              src="https://kimi-web-img.moonshot.cn/img/imageio.forbes.com/937659b72c68ca12d431ec1edefe2b901db48f4f.jpg"
+              alt="JBL Live"
+            />
+          </div>
+          <div class="product-info">
+            <h3>JBL Live 660NC</h3>
+            <p>
+              <span class="lang-fa"
+                >هدفون ANC با ۵۰ ساعت باتری و صدای Hi-Res</span
+              >
+              <span class="lang-en"
+                >ANC headphones with 50h battery and Hi-Res audio</span
+              >
+            </p>
+            <div class="product-footer">
+              <div class="price">۱۲,۸۰۰ <span>تومان</span></div>
+              <button class="btn-sm">
+                <span class="lang-fa">خرید</span>
+                <span class="lang-en">Buy</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Developer Footer -->
+    <footer class="dev-footer">
+      <div class="avatar"><i class="fas fa-code"></i></div>
+      <h3>Alireza Sargazi</h3>
+      <span class="role">
+        <span class="lang-fa">مهندس نرم‌افزار | توسعه‌دهنده فرانت‌اند</span>
+        <span class="lang-en">Software Engineer | Front-end Developer</span>
+      </span>
+      <div class="dev-links">
+        <a href="tel:09379339170"><i class="fas fa-phone"></i> 0937-933-9170</a>
+        <a href="mailto:mr.alireza.sargazi1@gmail.com"
+          ><i class="fas fa-envelope"></i> Email</a
+        >
+        <a href="https://instagram.com/ali_sargazi30" target="_blank"
+          ><i class="fab fa-instagram"></i> @ali_sargazi30</a
+        >
+        <a href="https://github.com/alisargazi30" target="_blank"
+          ><i class="fab fa-github"></i> @alisargazi30</a
+        >
+      </div>
+      <div class="copyright">
+        <span class="lang-fa"
+          >ساخته شده برای <a href="#">میکامال کیش</a> | پروژه‌های خام
+          HTML/CSS/JS</span
+        >
+        <span class="lang-en"
+          >Built for <a href="#">Mika Mall Kish</a> | Raw HTML/CSS/JS
+          Projects</span
+        >
+      </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
