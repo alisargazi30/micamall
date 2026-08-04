@@ -42,3 +42,8 @@ coverage/
 # Cache
 .cache/
 .parcel-cache/
+
+# help 
+README.md
+SETUP_GUIDE.md
+CHANGES_SUMMARY.md
