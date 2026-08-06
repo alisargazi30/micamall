@@ -23,6 +23,11 @@ setLang(localStorage.getItem("preferredLang") || "fa");
 // درج HTML های Sliders به صورت داینامیکی
 document.addEventListener('DOMContentLoaded', function() {
   slidersManager.renderToElement('.folder-grid');
+
+  const sliderCountElement = document.querySelector('.stats-grid .stat-card:first-child b');
+  if (sliderCountElement) {
+    sliderCountElement.textContent = String(slidersManager.getCount());
+  }
   
   // بعد از درج HTML، Observers و Event Listeners را اعمال کن
   setupObservers();

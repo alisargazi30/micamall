@@ -46,3 +46,4 @@ coverage/
 # Personal local guides (do not push)
 SETUP_GUIDE.md
 CHANGES_SUMMARY.md
+GIT_WORKFLOW_GUIDE.md
