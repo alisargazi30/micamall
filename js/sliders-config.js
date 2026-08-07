@@ -9,7 +9,7 @@ const SLIDERS_CONFIG = [
     id: 'nimanykish',
     path: './pages/nimanykish/index.html',
     icon: 'fa-gem',
-    logo: 'https://kimi-web-img.moonshot.cn/img/www.nimany.com/c401a24cc6d9bcae2b11c66931d88ecfb659ae23.jpg',
+    logo: '../assets/images/nimany.jpg',
     titles: {
       fa: 'اسلایدر نیمانی کیش',
       en: 'Nimany Kish Slider'
@@ -28,7 +28,7 @@ const SLIDERS_CONFIG = [
     id: 'kbeauty',
     path: './pages/kbeauty/index.html',
     icon: 'fa-spa',
-    logo: 'https://kimi-web-img.moonshot.cn/img/media.lanecrawford.com.cn/fb4641fb5d3f0c03b61ba059fd3e4463af458da5.png',
+    logo: '../assets/images/kbeauty.png',
     titles: {
       fa: 'اسلایدر ک بیوتی',
       en: 'K Beauty Slider'
@@ -47,7 +47,7 @@ const SLIDERS_CONFIG = [
     id: 'goldenconsept',
     path: './pages/goldenconsept/index.html',
     icon: 'fa-crown',
-    logo: 'https://kimi-web-img.moonshot.cn/img/cdn.shopify.com/b1d7374d4b6bb78de5d37d499f6e4221a27a68fd.png',
+    logo: '../assets/images/goldenconsept.jpeg',
     titles: {
       fa: 'اسلایدر گلدن کانسپت',
       en: 'Golden Consept Slider'
@@ -66,7 +66,7 @@ const SLIDERS_CONFIG = [
     id: 'jbl',
     path: './pages/jbl/index.html',
     icon: 'fa-volume-high',
-    logo: 'https://kimi-web-img.moonshot.cn/img/hnsgsfp.imgix.net/0542107fa967e18fda90985c3bc7c12b130d6e8e.jpg',
+    logo: '../assets/images/jbl.jpg',
     titles: {
       fa: 'اسلایدر jbl',
       en: 'JBL Slider'
@@ -85,7 +85,7 @@ const SLIDERS_CONFIG = [
     id: 'kiko',
     path: './pages/kiko/index.html',
     icon: 'fa-wand-magic-sparkles',
-    logo: 'https://kimi-web-img.moonshot.cn/img/wwd.com/529e05656b3978127d1f8a34f93a1264768e0b7f.jpg',
+    logo: '../assets/images/kiko.jpeg',
     titles: {
       fa: 'اسلایدر کیکو میلانو',
       en: 'KIKO Milano Slider'
@@ -95,6 +95,25 @@ const SLIDERS_CONFIG = [
       en: 'KIKO cosmetics slider with pink-black identity, bold typography, and smooth motion.'
     },
     tags: ['kiko', 'HTML/CSS/JS', 'Beauty'],
+    buttons: {
+      fa: 'ورود به اسلایدر',
+      en: 'Open Slider'
+    }
+  },
+  {
+    id: 'goldenrose',
+    path: './pages/goldenrose/index.html',
+    icon: 'fa-gem',
+    logo: '../assets/images/goldenrose.png',
+    titles: {
+      fa: 'اسلایدر گلدن رز',
+      en: 'Golden Rose Slider'
+    },
+    descriptions: {
+      fa: 'اسلایدر محصولات آرایشی گلدن رز با طراحی شیک و موشن نرم.',
+      en: 'Golden Rose cosmetics slider with chic design and smooth motion.'
+    },
+    tags: ['goldenrose', 'HTML/CSS/JS', 'Beauty', 'cosmetics'],
     buttons: {
       fa: 'ورود به اسلایدر',
       en: 'Open Slider'

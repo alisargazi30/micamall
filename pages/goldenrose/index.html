@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Rose Slider | اسلایدر گلدن رز</title>
+    <meta
+      name="description"
+      content="Golden Rose Beauty Slider - Bilingual HTML/CSS/JS by Alireza Sargazi"
+    />
+    <meta name="author" content="Alireza Sargazi" />
+    <meta name="keywords" content="Golden Rose, Beauty, Slider, HTML, CSS, JS, Bilingual, Persian, English" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#FFD700" />
+    <meta property="og:title" content="Golden Rose Slider | اسلایدر گلدن رز" />
+    <meta property="og:description" content="Golden Rose Beauty Slider - Bilingual HTML/CSS/JS by Alireza Sargazi" />
+    <meta property="og:image" content="https://kimi-web-img.kimi.ai/img/iconmall.ps/d6694c6f969d361d6dcedd6bd7e153fdc286d55a.jpg" />
+    <meta name="googlebot" content="index, follow" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <base target="_blank" />
+  </head>
+  <body>
+    <!-- Bokeh Canvas -->
+    <canvas id="bokehCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <a href="#" class="nav-brand">
+        <div class="logo-mark">GR</div>
+        <div class="logo-text">
+          <span class="main">GOLDEN ROSE</span>
+          <span class="sub">Style & Beauty</span>
+        </div>
+      </a>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button
+            class="lang-btn active"
+            data-lang="fa"
+            onclick="setLang('fa')"
+          >
+            FA
+          </button>
+          <button class="lang-btn" data-lang="en" onclick="setLang('en')">
+            EN
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider" id="heroSlider">
+      <!-- Slide 1: Store -->
+      <div class="slide active">
+        <div
+          class="slide-bg"
+          style="
+            background-image: url(&quot;https://kimi-web-img.kimi.ai/img/iconmall.ps/d6694c6f969d361d6dcedd6bd7e153fdc286d55a.jpg&quot;);
+          "
+        ></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <div class="slide-ornament"></div>
+          <h2>
+            <span class="lang-fa">
+              <span class="subline">زیبایی ترکیه‌ای</span>
+              <span class="gold-text">گلدن رز</span> در میکامال کیش
+            </span>
+            <span class="lang-en">
+              <span class="subline">Turkish Beauty</span>
+              <span class="gold-text">Golden Rose</span> at Mika Mall Kish
+            </span>
+          </h2>
+          <p>
+            <span class="lang-fa"
+              >برند برتر آرایشی ترکیه با بیش از ۳۰ سال سابقه. محصولات باکیفیت با
+              قیمتی مناسب برای زیبایی طبیعی شما.</span
+            >
+            <span class="lang-en"
+              >Turkey's leading cosmetics brand with over 30 years of
+              experience. High-quality products at affordable prices for your
+              natural beauty.</span
+            >
+          </p>
+          <div class="slide-btns">
+            <a href="#products" class="btn-gold">
+              <i class="fas fa-sparkles"></i>
+              <span class="lang-fa">مشاهده محصولات</span>
+              <span class="lang-en">View Products</span>
+            </a>
+            <a
+              href="https://github.com/alisargazi30"
+              target="_blank"
+              class="btn-outline-gold"
+            >
+              <i class="fab fa-github"></i>
+              <span class="lang-fa">گیتهاب</span>
+              <span class="lang-en">GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Face Products -->
+      <div class="slide">
+        <div
+          class="slide-bg"
+          style="
+            background-image: url(&quot;https://kimi-web-img.kimi.ai/img/api.anayase.com/a42b54703d799351361a953a0fb3dd75c8810e4a.webp&quot;);
+          "
+        ></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <div class="slide-ornament"></div>
+          <h2>
+            <span class="lang-fa">
+              <span class="subline">پوشش حرفه‌ای</span>
+              <span class="gold-text">HD Foundation</span><br />پوستی بی‌نقص
+            </span>
+            <span class="lang-en">
+              <span class="subline">Professional Coverage</span>
+              <span class="gold-text">HD Foundation</span><br />Flawless Skin
+            </span>
+          </h2>
+          <p>
+            <span class="lang-fa"
+              >کرم پودر HD گلدن رز با SPF 15 و بافت ساتن. پوششی یکدست و طبیعی
+              برای تمام روز.</span
+            >
+            <span class="lang-en"
+              >Golden Rose HD Foundation with SPF 15 and satin texture. Even and
+              natural coverage that lasts all day.</span
+            >
+          </p>
+          <div class="slide-btns">
+            <a href="#products" class="btn-gold">
+              <i class="fas fa-eye"></i>
+              <span class="lang-fa">جزئیات محصول</span>
+              <span class="lang-en">Product Details</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Lipstick -->
+      <div class="slide">
+        <div
+          class="slide-bg"
+          style="
+            background-image: url(&quot;https://kimi-web-img.kimi.ai/img/i.sa.makeupstore.com/60e3dc5bdae40c0ef03941ab9b4fed2df5a3a03c.jpg&quot;);
+          "
+        ></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <div class="slide-ornament"></div>
+          <h2>
+            <span class="lang-fa">
+              <span class="subline">رنگی جذاب</span>
+              <span class="gold-text">رژ لب طلایی</span><br />گلدن رز
+            </span>
+            <span class="lang-en">
+              <span class="subline">Captivating Color</span>
+              <span class="gold-text">Golden Lipstick</span><br />by Golden Rose
+            </span>
+          </h2>
+          <p>
+            <span class="lang-fa"
+              >مجموعه رژ لب‌های گلدن رز با بافت کرمی و ماندگاری بالا. رنگ‌های
+              متنوع برای هر سلیقه.</span
+            >
+            <span class="lang-en"
+              >Golden Rose lipstick collection with creamy texture and
+              long-lasting wear. Diverse shades for every taste.</span
+            >
+          </p>
+          <div class="slide-btns">
+            <a href="#products" class="btn-gold">
+              <i class="fas fa-heart"></i>
+              <span class="lang-fa">مشاهده رنگ‌ها</span>
+              <span class="lang-en">View Shades</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="slider-arrows">
+        <div class="arrow" onclick="prevSlide()">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="arrow" onclick="nextSlide()">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+      </div>
+      <div class="slider-dots">
+        <div class="dot active" onclick="goToSlide(0)"></div>
+        <div class="dot" onclick="goToSlide(1)"></div>
+        <div class="dot" onclick="goToSlide(2)"></div>
+      </div>
+      <div class="progress-bar" id="progressBar"></div>
+    </section>
+
+    <!-- Promise Section -->
+    <section class="promise">
+      <div class="promise-grid">
+        <div class="promise-item reveal">
+          <div class="icon-wrap"><i class="fas fa-award"></i></div>
+          <h4>
+            <span class="lang-fa">۳۰+ سال سابقه</span>
+            <span class="lang-en">30+ Years Legacy</span>
+          </h4>
+          <p>
+            <span class="lang-fa">برند معتبر ترکیه‌ای</span>
+            <span class="lang-en">Trusted Turkish Brand</span>
+          </p>
+        </div>
+        <div class="promise-item reveal">
+          <div class="icon-wrap"><i class="fas fa-flask"></i></div>
+          <h4>
+            <span class="lang-fa">فرمولاسیون پیشرفته</span>
+            <span class="lang-en">Advanced Formula</span>
+          </h4>
+          <p>
+            <span class="lang-fa">تست شده توسط متخصصان</span>
+            <span class="lang-en">Dermatologist Tested</span>
+          </p>
+        </div>
+        <div class="promise-item reveal">
+          <div class="icon-wrap"><i class="fas fa-palette"></i></div>
+          <h4>
+            <span class="lang-fa">رنگ‌های متنوع</span>
+            <span class="lang-en">Rich Color Range</span>
+          </h4>
+          <p>
+            <span class="lang-fa">بیش از ۲۰۰ رنگ مختلف</span>
+            <span class="lang-en">Over 200 Different Shades</span>
+          </p>
+        </div>
+        <div class="promise-item reveal">
+          <div class="icon-wrap"><i class="fas fa-hand-holding-heart"></i></div>
+          <h4>
+            <span class="lang-fa">قیمت مناسب</span>
+            <span class="lang-en">Affordable Luxury</span>
+          </h4>
+          <p>
+            <span class="lang-fa">کیفیت حرفه‌ای، قیمت عالی</span>
+            <span class="lang-en">Pro quality, great price</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section - Horizontal Scroll -->
+    <section class="products" id="products">
+      <div class="section-head reveal">
+        <h2>
+          <span class="lang-fa"
+            >محصولات <span class="gold-accent">گلدن رز</span></span
+          >
+          <span class="lang-en"
+            ><span class="gold-accent">Golden Rose</span> Products</span
+          >
+        </h2>
+        <p>
+          <span class="lang-fa"
+            >برترین محصولات آرایشی گلدن رز در میکامال کیش</span
+          >
+          <span class="lang-en"
+            >Top Golden Rose cosmetics at Mika Mall Kish</span
+          >
+        </p>
+      </div>
+      <div class="product-scroll">
+        <div class="product-card reveal">
+          <div class="product-img">
+            <span class="product-badge">Bestseller</span>
+            <img
+              src="https://kimi-web-img.kimi.ai/img/api.anayase.com/a42b54703d799351361a953a0fb3dd75c8810e4a.webp"
+              alt="HD Foundation"
+            />
+          </div>
+          <div class="product-info">
+            <h3>HD Foundation</h3>
+            <p>
+              <span class="lang-fa">کرم پودر HD با پوشش کامل و SPF 15</span>
+              <span class="lang-en"
+                >HD Foundation with full coverage and SPF 15</span
+              >
+            </p>
+            <div class="product-footer">
+              <div class="price">۱,۶۵۰ <span>تومان</span></div>
+              <button class="btn-sm-gold">
+                <span class="lang-fa">خرید</span>
+                <span class="lang-en">Shop</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal">
+          <div class="product-img">
+            <span class="product-badge">New</span>
+            <img
+              src="https://kimi-web-img.kimi.ai/img/i.makeup.cy/b4f1fe08a04edee248f50c39ff900891a0188023.jpg"
+              alt="Longstay Lipstick"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Longstay Liquid Matte</h3>
+            <p>
+              <span class="lang-fa">رژ لب مایع مات با ماندگاری ۲۴ ساعته</span>
+              <span class="lang-en">Liquid matte lipstick with 24h wear</span>
+            </p>
+            <div class="product-footer">
+              <div class="price">۹۸۰ <span>تومان</span></div>
+              <button class="btn-sm-gold">
+                <span class="lang-fa">خرید</span>
+                <span class="lang-en">Shop</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal">
+          <div class="product-img">
+            <img
+              src="https://kimi-web-img.kimi.ai/img/i.sa.makeupstore.com/60e3dc5bdae40c0ef03941ab9b4fed2df5a3a03c.jpg"
+              alt="Golden Lipstick"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Golden Lipstick</h3>
+            <p>
+              <span class="lang-fa"
+                >رژ لب کلاسیک با بافت کرمی و رنگدانه قوی</span
+              >
+              <span class="lang-en"
+                >Classic lipstick with creamy texture and rich pigment</span
+              >
+            </p>
+            <div class="product-footer">
+              <div class="price">۱,۱۰۰ <span>تومان</span></div>
+              <button class="btn-sm-gold">
+                <span class="lang-fa">خرید</span>
+                <span class="lang-en">Shop</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal">
+          <div class="product-img">
+            <span class="product-badge">Hot</span>
+            <img
+              src="https://kimi-web-img.kimi.ai/img/cdn.salla.sa/19db39f7f31cc2ceb9a91804cbc1d76464d5fd2b.png"
+              alt="Golden Rose Logo"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Style & Beauty Set</h3>
+            <p>
+              <span class="lang-fa">ست کامل آرایشی گلدن رز با تخفیف ویژه</span>
+              <span class="lang-en"
+                >Complete Golden Rose makeup set with special discount</span
+              >
+            </p>
+            <div class="product-footer">
+              <div class="price">۴,۵۰۰ <span>تومان</span></div>
+              <button class="btn-sm-gold">
+                <span class="lang-fa">خرید</span>
+                <span class="lang-en">Shop</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <i class="fas fa-chevron-right"></i>
+        <span class="lang-fa">برای دیدن بیشتر بکشید</span>
+        <span class="lang-en">Swipe for more</span>
+      </div>
+    </section>
+
+    <!-- Developer Footer -->
+    <footer class="dev-footer">
+      <div class="dev-avatar"><i class="fas fa-code"></i></div>
+      <h3>Alireza Sargazi</h3>
+      <span class="role">
+        <span class="lang-fa">مهندس نرم‌افزار | توسعه‌دهنده فرانت‌اند</span>
+        <span class="lang-en">Software Engineer | Front-end Developer</span>
+      </span>
+      <div class="dev-links">
+        <a href="tel:09379339170"><i class="fas fa-phone"></i> 0937-933-9170</a>
+        <a href="mailto:mr.alireza.sargazi1@gmail.com"
+          ><i class="fas fa-envelope"></i> Email</a
+        >
+        <a href="https://instagram.com/ali_sargazi30" target="_blank"
+          ><i class="fab fa-instagram"></i> @ali_sargazi30</a
+        >
+        <a href="https://github.com/alisargazi30" target="_blank"
+          ><i class="fab fa-github"></i> @alisargazi30</a
+        >
+      </div>
+      <div class="copyright">
+        <span class="lang-fa"
+          >ساخته شده برای <a href="#">میکامال کیش</a> | پروژه‌های خام
+          HTML/CSS/JS</span
+        >
+        <span class="lang-en"
+          >Built for <a href="#">Mika Mall Kish</a> | Raw HTML/CSS/JS
+          Projects</span
+        >
+      </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

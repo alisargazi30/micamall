@@ -10,6 +10,8 @@ This project contains a main showcase page and multiple standalone slider pages:
 - K Beauty
 - Golden Consept
 - JBL
+- Kiko
+- Golden Rose
 
 All slider cards on the main page are generated dynamically from one JavaScript config file.
 
@@ -36,6 +38,8 @@ micamall/
     kbeauty/
     goldenconsept/
     jbl/
+    kiko/
+    goldenrose/
 ```
 
 ## Where To Edit

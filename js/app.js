@@ -28,10 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
   if (sliderCountElement) {
     sliderCountElement.textContent = String(slidersManager.getCount());
   }
-  
+
   // بعد از درج HTML، Observers و Event Listeners را اعمال کن
   setupObservers();
   setupAnchorLinks();
+  setupHeroSlider();
 });
 
 const navbar = document.getElementById("navbar");
@@ -72,5 +73,63 @@ function setupAnchorLinks() {
   });
 }
 
-// Navbar scroll effect
+/**
+ * اسلایدر تصویری هیرو با عکس‌های میکامال - تعویض خودکار، کنترل نقطه‌ای و سوایپ لمسی
+ * Hero image slider using Mica Mall photos - autoplay, dot controls, touch swipe support
+ */
+function setupHeroSlider() {
+  const slides = Array.from(document.querySelectorAll("#heroSlides .hero-slide"));
+  const dotsRoot = document.getElementById("heroDots");
+  const heroSlider = document.getElementById("heroSlider");
+  if (!slides.length || !dotsRoot) {
+    return;
+  }
+
+  let current = 0;
+  let autoplayId;
+  let touchStartX = 0;
+
+  slides.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "dot" + (index === 0 ? " active" : "");
+    dot.setAttribute("aria-label", `اسلاید ${index + 1}`);
+    dot.addEventListener("click", () => {
+      goTo(index);
+      restartAutoplay();
+    });
+    dotsRoot.appendChild(dot);
+  });
+
+  const dots = Array.from(dotsRoot.children);
+
+  function goTo(index) {
+    slides[current].classList.remove("active");
+    dots[current].classList.remove("active");
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add("active");
+    dots[current].classList.add("active");
+  }
+
+  function restartAutoplay() {
+    clearInterval(autoplayId);
+    autoplayId = setInterval(() => goTo(current + 1), 5000);
+  }
+
+  if (heroSlider) {
+    heroSlider.addEventListener("touchstart", (event) => {
+      touchStartX = event.changedTouches[0].screenX;
+    });
+    heroSlider.addEventListener("touchend", (event) => {
+      const delta = event.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(delta) < 40) {
+        return;
+      }
+      goTo(delta > 0 ? current - 1 : current + 1);
+      restartAutoplay();
+    });
+  }
+
+  restartAutoplay();
+}
 
